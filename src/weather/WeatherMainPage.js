@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import WeatherForm from './WeatherForm'
-import ForecastForm from './ForecastForm'
+// import ForecastForm from './ForecastForm'
 import Weather from './Weather'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -44,25 +44,26 @@ class WeatherMainPage extends Component {
       icon: undefined,
       error: undefined
     }
-  // depricated...
-  // constructor (props) {
-  //   super(props)
-  //   this.state = {
-  //
-  //   }
-  // }
-  getForecast = async (e) => {
-    e.preventDefault()
-    const city = e.target.elements.city.value
-    const country = e.target.elements.country.value
-    // const apiCall = await fetch(`https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid=${API_KEY}`)
-    const apiCall = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=imperial&appid=${API_KEY}`)
-    const data = await apiCall.json()
-    console.log('data forecast', data)
-    if (city && country) {
-      console.log(data, 'hi')
-    }
-  }
+    // depricated...
+    // constructor (props) {
+    //   super(props)
+    //   this.state = {
+    //
+    //   }
+    // }
+
+    // getForecast = async (e) => {
+    //   e.preventDefault()
+    //   const city = e.target.elements.city.value
+    //   const country = e.target.elements.country.value
+    //   // const apiCall = await fetch(`https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid=${API_KEY}`)
+    //   const apiCall = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=imperial&appid=${API_KEY}`)
+    //   const data = await apiCall.json()
+    //   console.log('data forecast', data)
+    //   if (city && country) {
+    //     console.log(data, 'hi')
+    //   }
+    // }
 
   getWeather = async (e) => {
     e.preventDefault()
@@ -146,7 +147,6 @@ class WeatherMainPage extends Component {
     return (
       <div className="form-container">
         <div className="content">
-          <ForecastForm className="form" getForecast={this.getForecast} />
           <WeatherForm className="form" getWeather={this.getWeather} />
           <Weather
             temperature={this.state.temperature}
@@ -164,6 +164,7 @@ class WeatherMainPage extends Component {
   }
 }
 
+// <ForecastForm className="form" getForecast={this.getForecast} />
 // <div>
 //   <div className="wrapper">
 //     <div className="main">
