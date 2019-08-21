@@ -125,6 +125,8 @@ class WeatherMainPage extends Component {
     //     // return <i className="far fa-clock">Run</i>
     } else if (str === 'light rain' || str === 'rain') {
       return <FontAwesomeIcon icon={faCloudRain} size="2x" />
+    } else if (str === 'haze') {
+      return <FontAwesomeIcon icon={faSmog} size="2x" />
     } else if (str === 'clear sky') {
       return <FontAwesomeIcon icon={faSun} size="2x" />
     } else if (str === 'mist') {
@@ -133,6 +135,8 @@ class WeatherMainPage extends Component {
       return <FontAwesomeIcon icon={faCloudSun} size="2x" />
     } else if (str === 'heavy intensity rain') {
       return <FontAwesomeIcon icon={faCloudRain} size="2x" />
+    } else if (str === 'overcast clouds') {
+      return <FontAwesomeIcon icon={faCloud} size="2x" />
     } else if (str === 'thunderstorm') {
       return <FontAwesomeIcon icon={faBolt} size="2x" />
     } else if (str === 'snow') {

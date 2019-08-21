@@ -29,7 +29,7 @@ class Weather extends Component {
           }
           {
             this.props.description && <p className="weather-key">Description:
-              <span className="weather-value"> { this.props.icon } { this.props.description }</span>
+              <span className="weather-value"> { this.props.description } { this.props.icon } </span>
             </p>
           }
           {

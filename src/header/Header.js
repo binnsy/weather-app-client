@@ -19,14 +19,14 @@ import './Header.scss'
 
 const alwaysOptions = (
   <React.Fragment>
-    <Link to="/">Home</Link>
-    <Link to="/weather">Weather</Link>
+    <Link className="link" to="/">Home</Link>
+    <Link className="link" to="/weather">Weather</Link>
   </React.Fragment>
 )
 
 const Header = ({ user }) => (
   <header className="main-header">
-    <h1>Weather Now</h1>
+    <h1 className="title">Weather Now</h1>
     <nav>
       { alwaysOptions }
     </nav>
